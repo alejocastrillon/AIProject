@@ -1,67 +1,81 @@
-idkeywords,keyword
-92,ALEGRIAS
-111,ALTAGRACIA
-19,BELMONTE
-31,BOMBAY
-28,"BOMBAY III"
-101,"CAMILO TORRES"
-34,"CAMPESTRE C"
-30,CAMPESTRES
-104,CASTILLA
-12,CENTRO
-27,"CIUDAD JARDIN"
-112,COMFAMILIAR
-119,"COMUNA DEL CAFÉ"
-115,"CRUCE DE COMBIA"
-10,"EL CAMPIN (BELMONTE)"
-33,"EL ESTANQUILLO"
-22,"EL ESTANQUILLO ""DOSQUEBRADAS"""
-91,"EL JORDAN"
-122,"EL RETIRO"
-24,"EL TRIUNFO"
-4,FRAILES
-14,FRANCISCANAS
-23,"GAITAN BAJO"
-107,"GILBERTO PELAEZ ANGEL"
-121,"GLORIETA CORALES"
-118,GUACARI
-93,GUAYABAL
-36,"HOSPITAL MENTAL"
-21,"JARDIN II"
-113,"LA BODEGA"
-103,"LA DIVISA"
-13,"LA GRACIELA"
-29,"LA JULITA"
-35,"LA LIBERTAD"
-109,"LA ROMELIA"
-117,"LA SUECIA"
-25,"LA UNIDAD"
-108,"LA VIRGINIA"
-95,LAGUNETA
-114,LIMONAR
-97,"LOS LAGOS"
-90,"LOS PINOS"
-18,MALAGA
-110,MERCASA
-17,"MIRADOR ALTOS DEL LLANO GRANDE"
-120,"MIRADOR DE SANTA MONICA"
-105,MOLINOS
-96,MONTELARGO
-5,MONTELIBANO
-26,ORMAZA
-94,"PARQUE LA LIBERTAD"
-106,PIMPOLLO
-7,"PLAYA RICA"
-6,REMANSO
-20,SAMARIA
-11,"SAMARIA I"
-99,"SAMARIA II"
-116,"SAN MARINO"
-98,"SAN NICOLAS"
-16,"SECTOR E (Comuna del Café)"
-102,"UNIVERSIDAD CATÓLICA"
-9,"URBANIZACION SALAMANCA"
-15,UTP
-32,"VARIANTE LA ROMELIA EL POLLO"
-8,"VARIANTE ROMELIA EL POLLO (Ingreso la Graciel"
-100,"VILLA VERDE"
+/*
+-- Query: SELECT * FROM routes_city.keywords
+LIMIT 0, 1000
+
+-- Date: 2018-09-15 15:24
+*/
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (92,'ALEGRIAS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (111,'ALTAGRACIA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (19,'BELMONTE');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (31,'BOMBAY');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (28,'BOMBAY III');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (101,'CAMILO TORRES');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (34,'CAMPESTRE C');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (30,'CAMPESTRES');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (128,'CANCELES');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (104,'CASTILLA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (12,'CENTRO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (27,'CIUDAD JARDIN');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (112,'COMFAMILIAR');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (119,'COMUNA DEL CAFÉ');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (130,'CONCENTRACION ESCOLAR LA JULITA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (115,'CRUCE DE COMBIA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (10,'EL CAMPIN (BELMONTE)');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (33,'EL ESTANQUILLO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (22,'EL ESTANQUILLO \"DOSQUEBRADAS\"');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (124,'EL GURRIO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (91,'EL JORDAN');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (122,'EL RETIRO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (24,'EL TRIUNFO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (129,'ESTACION VILLEGAS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (132,'EXPOFUTURO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (4,'FRAILES');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (14,'FRANCISCANAS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (23,'GAITAN BAJO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (107,'GILBERTO PELAEZ ANGEL');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (121,'GLORIETA CORALES');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (118,'GUACARI');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (93,'GUAYABAL');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (36,'HOSPITAL MENTAL');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (21,'JARDIN II');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (113,'LA BODEGA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (103,'LA DIVISA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (13,'LA GRACIELA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (29,'LA JULITA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (35,'LA LIBERTAD');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (127,'LA PALMILLA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (109,'LA ROMELIA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (117,'LA SUECIA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (25,'LA UNIDAD');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (108,'LA VIRGINIA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (95,'LAGUNETA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (114,'LIMONAR');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (97,'LOS LAGOS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (90,'LOS PINOS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (18,'MALAGA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (110,'MERCASA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (17,'MIRADOR ALTOS DEL LLANO GRANDE');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (120,'MIRADOR DE SANTA MONICA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (105,'MOLINOS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (96,'MONTELARGO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (5,'MONTELIBANO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (26,'ORMAZA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (94,'PARQUE LA LIBERTAD');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (131,'PERLA DEL SUR');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (106,'PIMPOLLO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (7,'PLAYA RICA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (6,'REMANSO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (126,'RIO BARBAS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (20,'SAMARIA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (11,'SAMARIA I');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (99,'SAMARIA II');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (116,'SAN MARINO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (98,'SAN NICOLAS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (16,'SECTOR E (Comuna del Café)');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (125,'TRES PUERTAS');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (102,'UNIVERSIDAD CATÓLICA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (9,'URBANIZACION SALAMANCA');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (15,'UTP');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (32,'VARIANTE LA ROMELIA EL POLLO');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (8,'VARIANTE ROMELIA EL POLLO (Ingreso la Graciel');
+INSERT INTO `keywords` (`idkeywords`,`keyword`) VALUES (100,'VILLA VERDE');

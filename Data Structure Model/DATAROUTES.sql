@@ -2,7 +2,7 @@
 -- Query: SELECT * FROM routes_city.route
 LIMIT 0, 1000
 
--- Date: 2018-09-15 12:18
+-- Date: 2018-09-15 15:24
 */
 INSERT INTO `route` (`idroute`,`name`) VALUES (1,'1');
 INSERT INTO `route` (`idroute`,`name`) VALUES (2,'2');
@@ -78,3 +78,4 @@ INSERT INTO `route` (`idroute`,`name`) VALUES (71,'39B');
 INSERT INTO `route` (`idroute`,`name`) VALUES (72,'42');
 INSERT INTO `route` (`idroute`,`name`) VALUES (73,'43');
 INSERT INTO `route` (`idroute`,`name`) VALUES (74,'44');
+INSERT INTO `route` (`idroute`,`name`) VALUES (75,'35 EL GURRIO');
