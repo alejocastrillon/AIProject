@@ -1,5 +1,10 @@
 import speech_recognition as sr
 import pygame
+import peewee as pw
+
+myConnection = pw.MySQLDatabase("routes_city", host="127.0.0.1", user = "root", passwd = "")
+
+myConnection.connect()
 
 # obtain audio from the microphone
     
