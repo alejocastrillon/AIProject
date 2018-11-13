@@ -2,7 +2,7 @@
 -- Query: SELECT * FROM routes_city.points_route
 LIMIT 0, 1000
 
--- Date: 2018-10-17 17:49
+-- Date: 2018-11-13 15:47
 */
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (1,'4.812073','-75.661263',1);
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (2,'4.811540','-75.660998',1);
@@ -323,3 +323,5 @@ INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) 
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (317,'4.807493','-75.697610',5);
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (318,'4.808177','-75.697513',5);
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (319,'4.807728','-75.694144',5);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (320,'4.790775','-75.712011',6);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (321,'4.793095','-75.710809',6);
