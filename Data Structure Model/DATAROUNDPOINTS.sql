@@ -2,7 +2,7 @@
 -- Query: SELECT * FROM routes_city.points_route
 LIMIT 0, 1000
 
--- Date: 2018-11-14 22:55
+-- Date: 2018-11-14 23:13
 */
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (1,'4.812073','-75.661263',1);
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (2,'4.811540','-75.660998',1);
@@ -383,27 +383,21 @@ INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) 
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (377,'4.826323','-75.696448',6);
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (378,'4.828050',' -75.697623',6);
 INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (379,'4.827895',' -75.698691',6);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (380,'4.824399','-75.700804',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (381,'4.824410','-75.710160',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (382,'4.819321','-75.711458',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (383,'4.816584','-75.717252',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (384,'4.814446','-75.714302',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (385,'4.813454',' -75.707959',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (386,'4.814528','-75.707811',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (387,'4.813208','-75.696095',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (388,'4.803741','-75.697152',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (389,'4.803629','-75.695972',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (390,'4.805612','-75.700575',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (391,'4.804447','75.700371',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (392,'4.803014','-75.699373',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (393,'4.802169','-75.697962',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (394,'4.800095','-75.696782',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (395,'4.800704','-75.694202',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (396,'4.803772','-75.693708',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (397,'4.799752','-75.693852',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (398,'4.794976','-75.692396',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (399,'4.790008',' -75.689343',7);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (400,NULL,NULL,NULL);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (401,NULL,NULL,NULL);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (402,NULL,NULL,NULL);
-INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (403,NULL,NULL,NULL);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (380,'4.790008',' -75.689343',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (381,'4.795022','-75.692470',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (382,'4.801897','-75.694094',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (383,'4.803789','-75.695210',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (384,'4.800721','-75.697291',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (385,'4.801523','-75.697012',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (386,'4.803009','-75.699469',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (387,'4.805126','-75.700681',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (388,'4.803693','-75.696014',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (389,'4.803768','-75.697173',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (390,'4.813204','-75.696106',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (391,'4.814530','-75.707790',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (392,'4.813418','-75.707983',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (393,'4.815134','-75.716464',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (394,'4.816422','-75.716840',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (395,'4.820162','-75.710594',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (396,'4.824415','-75.710144',7);
+INSERT INTO `points_route` (`idpoints_route`,`latitude`,`longitude`,`route_id`) VALUES (397,'4.823886','-75.695665',7);
