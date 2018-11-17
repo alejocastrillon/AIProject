@@ -3,7 +3,8 @@ import pygame
 import peewee as pw
 import googlemaps
 import json
-
+import nltk
+from nltk import load_parser
 
 gmaps = googlemaps.Client(key = 'AIzaSyCbbzGbkEBCF1nkGRpcGTFgeqhq0LTYu6o')
 
@@ -59,7 +60,7 @@ for rt in route_keywords.filter(keywords = keywords.filter(keyword = 'UTP')):
     print(rt.route.name)'''
 
 '''Muestra los puntos de quiebre de ruta centralizados'''
-coord = list()
+'''coord = list()
 for x in points_route.filter(route = route.filter(name = '3A')):
     print(x.latitude, x.longitude)
     y = list()
@@ -70,14 +71,22 @@ data = gmaps.nearest_roads(points = coord)
 
 
 for x in data:
-    print(x['location']['latitude'], x['location']['longitude'])
+    print(x['location']['latitude'], x['location']['longitude'])'''
 
 
 # obtain audio from the microphone
+cp = load_parser('myGrammar/grammar.fcfg');
+#nltk.data.show_cfg('/home/alejandro/DocumentosmyGrammar/grammar/fcfg')
     
 r = sr.Recognizer()
 with sr.Microphone(device_index = 0) as source:
     r.adjust_for_ambient_noise(source)
     print("Di alguito!")
     audio = r.listen(source)
-print(r.recognize_google(audio))
+data = (r.recognize_google(audio))
+print(data)
+trees = list(cp.parse(data.split()))
+answer = trees[0].label()['SEM']
+answer = [s for s in answer if s]
+answerSQL = ' '.join(answer)
+print(answerSQL)

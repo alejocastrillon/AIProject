@@ -1,0 +1,17 @@
+% start S
+S[SEM=(?np + WHERE + ?vp)] -> NP[SEM=?np] VP[SEM=?vp]
+VP[SEM=(?v + ?pp)] -> IV[SEM=?v] PP[SEM=?pp]
+VP[SEM=(?v + ?ap)] -> IV[SEM=?v] AP[SEM=?ap]
+NP[SEM=(?det + ?n)] -> Det[SEM=?det] N[SEM=?n]
+PP[SEM=(?p + ?np)] -> P[SEM=?p] NP[SEM=?np]
+AP[SEM=?pp] -> A[SEM=?a] PP[SEM=?pp]
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 1)'] -> 'uno'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 2)'] -> 'dos'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 3A)'] -> 'tres A' | 'tresA'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 3)'] -> 'tres'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 4)'] -> 'cuatro'
+Det[SEM='SELECT'] -> 'Cuales' | 'Que'
+N[SEM='City FROM '] -> 'lugares'
+IV[SEM=''] -> 'pasan la ruta numero'
+A[SEM=''] -> 'cubre la ruta numero'
+P[SEM=''] -> 'recorre la ruta numero'
