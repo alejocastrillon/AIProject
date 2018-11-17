@@ -5,6 +5,7 @@ import googlemaps
 import json
 import nltk
 from nltk import load_parser
+import mysql.connector
 
 gmaps = googlemaps.Client(key = 'AIzaSyCbbzGbkEBCF1nkGRpcGTFgeqhq0LTYu6o')
 
@@ -74,6 +75,12 @@ for x in data:
     print(x['location']['latitude'], x['location']['longitude'])'''
 
 
+cnx = mysql.connector.connect(user='root', password='',
+                              host='127.0.0.1',
+                              database='routes_city')
+
+cursor = cnx.cursor()
+
 # obtain audio from the microphone
 cp = load_parser('myGrammar/grammar.fcfg');
 #nltk.data.show_cfg('/home/alejandro/DocumentosmyGrammar/grammar/fcfg')
@@ -83,10 +90,20 @@ with sr.Microphone(device_index = 0) as source:
     r.adjust_for_ambient_noise(source)
     print("Di alguito!")
     audio = r.listen(source)
-data = (r.recognize_google(audio))
-print(data)
-trees = list(cp.parse(data.split()))
-answer = trees[0].label()['SEM']
-answer = [s for s in answer if s]
-answerSQL = ' '.join(answer)
-print(answerSQL)
+print("Cargando")
+try:
+    data = (r.recognize_google(audio))
+    print(data)
+    trees = list(cp.parse(data.split()))
+    answer = trees[0].label()['SEM']
+    answer = [s for s in answer if s]
+    answerSQL = ' '.join(answer)
+    print(answerSQL)
+    cursor.execute(answerSQL)
+    for keywords_id in cursor:
+        for x in keywords.filter(idkeywords = keywords_id):
+            print(x.keyword)
+except sr.UnknownValueError:
+    print("Google Speech Recognition no pudo reconocer el audio")
+except sr.RequestError as e:
+    print("Could not request results from Google Speech Recognition service; {0}".format(e))
