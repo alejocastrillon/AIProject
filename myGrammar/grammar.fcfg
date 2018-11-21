@@ -5,13 +5,14 @@ VP[SEM=(?v + ?ap)] -> IV[SEM=?v] AP[SEM=?ap]
 NP[SEM=(?det + ?n)] -> Det[SEM=?det] N[SEM=?n]
 PP[SEM=(?p + ?np)] -> P[SEM=?p] NP[SEM=?np]
 AP[SEM=?pp] -> A[SEM=?a] PP[SEM=?pp]
-NP[SEM='route_id=(SELECT idroute FROM route WHERE name = "1")'] -> 'uno'
-NP[SEM='route_id=(SELECT idroute FROM route WHERE name = "2")'] -> 'two' | '2'
-NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 3A)'] -> 'tres A' | 'tresA'
-NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 3)'] -> 'tres'
-NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 4)'] -> 'cuatro'
-Det[SEM='SELECT'] -> 'which' | 'Que'
-N[SEM='keywords_id FROM route_keywords'] -> 'places'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = "1")'] -> 'uno' | '1' | 'one'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = "2")'] -> 'two' | '2' | 'dos'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 3A)'] -> 'three A' | 'tresA' | '3 A'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 3)'] -> 'tres' | '3' | 'three'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 4)'] -> 'cuatro' | '4' | 'four'
+NP[SEM='route_id=(SELECT idroute FROM route WHERE name = 5)'] -> 'cinco' | '5' | 'five'
+Det[SEM='SELECT'] -> 'which' | 'que'
+N[SEM='keywords_id FROM route_keywords'] -> 'places' | 'lugares'
 IV[SEM=''] -> 'does'
 A[SEM=''] -> 'route' 
 P[SEM=''] -> 'number'
