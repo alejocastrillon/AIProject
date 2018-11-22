@@ -1,0 +1,25 @@
+% start S
+S[SEM=(?np + ?vp)] -> NP[SEM=?np] VP[SEM=?vp]
+VP[SEM=(?v + ?pp)] -> IV[SEM=?v] PP[SEM=?pp]
+VP[SEM=(?v + ?ap)] -> IV[SEM=?v] AP[SEM=?ap]
+NP[SEM=(?det + ?n)] -> Det[SEM=?det] N[SEM=?n]
+PP[SEM=(?p + ?np)] -> P[SEM=?p] NP[SEM=?np]
+AP[SEM=?pp] -> A[SEM=?a] PP[SEM=?pp]
+NP[SEM=''] -> 'uno' | '1' | 'one'
+NP[SEM=''] -> 'two' | '2' | 'dos'
+NP[SEM=''] -> 'three A' | 'tresA' | '3 A'
+NP[SEM=''] -> 'tres' | '3' | 'three'
+NP[SEM=''] -> 'cuatro' | '4' | 'four'
+NP[SEM=''] -> 'cinco' | '5' | 'five'
+NP[SEM=''] -> ' U T P' | 'UTP' | 'u t p' | 'utp'
+Det[SEM=''] -> 'which' | 'que'
+N[SEM='lugares'] -> 'places' | 'lugares'
+N[SEM='rutas'] -> 'routes' | 'rutas' | 'ruta' | 'route'
+IV[SEM=''] -> 'does'
+A[SEM=''] -> 'route' 
+P[SEM=''] -> 'number'
+A[SEM=''] -> 'cubre la ruta numero'
+P[SEM=''] -> 'recorre la ruta numero'
+IV[SEM=''] -> 'pass' | 'passed'
+A[SEM=''] -> 'through'
+P[SEM=''] -> 'the'

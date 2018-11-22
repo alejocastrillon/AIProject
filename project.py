@@ -82,7 +82,8 @@ cnx = mysql.connector.connect(user='root', password='',
 cursor = cnx.cursor()
 
 # obtain audio from the microphone
-cp = load_parser('myGrammar/grammar.fcfg');
+cp = load_parser('myGrammar/grammar.fcfg')
+cs = load_parser('myGrammar/senseQuestion.fcfg')
 #nltk.data.show_cfg('/home/alejandro/DocumentosmyGrammar/grammar/fcfg')
     
 r = sr.Recognizer()
@@ -98,11 +99,20 @@ try:
     answer = trees[0].label()['SEM']
     answer = [s for s in answer if s]
     answerSQL = ' '.join(answer)
+    treesS = list(cs.parse(data.split()))
+    typeQ = treesS[0].label()['SEM']
+    typeQ = [s for s in typeQ if s]
+    typeQuestion = ' '.join(typeQ)
+    print(typeQuestion)
     print(answerSQL)
     cursor.execute(answerSQL)
     for keywords_id in cursor:
-        for x in keywords.filter(idkeywords = keywords_id):
-            print(x.keyword)
+        if typeQuestion == 'lugares':
+            for x in keywords.filter(idkeywords = keywords_id):
+                print(x.keyword)
+        elif typeQuestion == 'rutas':
+            for x in route.filter(idroute = keywords_id):
+                print(x.name)
 except sr.UnknownValueError:
     print("Google Speech Recognition no pudo reconocer el audio")
 except sr.RequestError as e:
