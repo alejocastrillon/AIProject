@@ -1,5 +1,4 @@
 import speech_recognition as sr
-import pygame
 import peewee as pw
 import googlemaps
 import json
