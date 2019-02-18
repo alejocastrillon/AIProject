@@ -84,11 +84,11 @@ cnx = mysql.connector.connect(user='root', password='',
 
 cursor = cnx.cursor()
 
-# obtain audio from the microphone
 cp = load_parser('myGrammar/grammar.fcfg')
 cs = load_parser('myGrammar/senseQuestion.fcfg')
-#nltk.data.show_cfg('/home/alejandro/DocumentosmyGrammar/grammar/fcfg')
-    
+
+
+# obtain audio from the microphone
 r = sr.Recognizer()
 r.energy_threshold = 2500
 with sr.Microphone() as source:
@@ -112,18 +112,20 @@ try:
     print(answerSQL)
     cursor.execute(answerSQL)
     textResult= ''
+    if typeQuestion == 'lugares':
+        textResult = textResult + 'Los lugares por donde pasa la ruta son: '
+    elif typeQuestion == 'rutas':
+        textResult = textResult + 'Las rutas que pasan por ese lugar son: '
     for keywords_id in cursor:
         if typeQuestion == 'lugares':
-            textResult = textResult + 'Los lugares por donde pasa la ruta son: '
             for x in keywords.filter(idkeywords = keywords_id):
                 print(x.keyword)
                 textResult = textResult + ' ' + x.keyword
         elif typeQuestion == 'rutas':
-            textResult = textResult + 'Las rutas que pasan por ese lugar son: '
             for x in route.filter(idroute = keywords_id):
                 textResult = textResult + ' ' + x.name
                 print(x.name)
-    tts = gTTS(text=textResult, lang='es')
+    tts = gTTS(text=textResult, lang='es-CO')
     tts.save("out.mp3")
     os.system("vlc out.mp3 --intf dummy --play-and-exit")
     time.sleep(3)

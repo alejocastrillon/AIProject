@@ -1,3 +1,4 @@
 {
-    "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "autopep8",
+    "python.pythonPath": "/home/utp/anaconda3/bin/python"
 }
