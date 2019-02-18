@@ -1,10 +1,13 @@
 import speech_recognition as sr
 import pygame
+import os
 import peewee as pw
 import googlemaps
 import json
 import nltk
+import time
 from nltk import load_parser
+from gtts import gTTS
 import mysql.connector
 
 gmaps = googlemaps.Client(key = 'AIzaSyCbbzGbkEBCF1nkGRpcGTFgeqhq0LTYu6o')
@@ -87,14 +90,16 @@ cs = load_parser('myGrammar/senseQuestion.fcfg')
 #nltk.data.show_cfg('/home/alejandro/DocumentosmyGrammar/grammar/fcfg')
     
 r = sr.Recognizer()
-with sr.Microphone(device_index = 0) as source:
+r.energy_threshold = 2500
+with sr.Microphone() as source:
     r.adjust_for_ambient_noise(source)
     print("Di alguito!")
     audio = r.listen(source)
 print("Cargando")
 try:
-    data = (r.recognize_google(audio))
+    data = (r.recognize_google(audio, language= 'es-CO'))
     print(data)
+    data = 'que lugares recorre ruta numero 1'
     trees = list(cp.parse(data.split()))
     answer = trees[0].label()['SEM']
     answer = [s for s in answer if s]
@@ -106,13 +111,22 @@ try:
     print(typeQuestion)
     print(answerSQL)
     cursor.execute(answerSQL)
+    textResult= ''
     for keywords_id in cursor:
         if typeQuestion == 'lugares':
+            textResult = textResult + 'Los lugares por donde pasa la ruta son: '
             for x in keywords.filter(idkeywords = keywords_id):
                 print(x.keyword)
+                textResult = textResult + ' ' + x.keyword
         elif typeQuestion == 'rutas':
+            textResult = textResult + 'Las rutas que pasan por ese lugar son: '
             for x in route.filter(idroute = keywords_id):
+                textResult = textResult + ' ' + x.name
                 print(x.name)
+    tts = gTTS(text=textResult, lang='es')
+    tts.save("out.mp3")
+    os.system("vlc out.mp3 --intf dummy --play-and-exit")
+    time.sleep(3)
 except sr.UnknownValueError:
     print("Google Speech Recognition no pudo reconocer el audio")
 except sr.RequestError as e:
