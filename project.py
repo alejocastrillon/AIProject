@@ -112,11 +112,11 @@ try:
         criteria = data[i:len(data)].replace(" ", "_")
         data = consu +  criteria;
         print(data)
-    trees = list(cp.parse(data.split()))
+    trees = list(cp.parse(data.lower().split()))
     answer = trees[0].label()['SEM']
     answer = [s for s in answer if s]
     answerSQL = ' '.join(answer)
-    treesS = list(cs.parse(data.split()))
+    treesS = list(cs.parse(data.lower().split()))
     typeQ = treesS[0].label()['SEM']
     typeQ = [s for s in typeQ if s]
     typeQuestion = ' '.join(typeQ)
