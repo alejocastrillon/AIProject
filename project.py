@@ -99,7 +99,19 @@ print("Cargando")
 try:
     data = (r.recognize_google(audio, language= 'es-CO'))
     print(data)
-    data = 'que lugares recorre ruta numero 1'
+    i = None
+    if("por" in data):
+        for index in range(0, len(data)):
+            if(data[index] == 'p'  and data[index + 1] == 'o' and data[index + 2] == 'r' and data[index + 3] == ' ' and ((data[index + 4] == 'l' and data[index + 5] == 'a') or (data[index + 4] == 'e' and data[index + 5] == 'l'))):
+                i = index + 7;
+                break;
+            elif(data[index] == 'p'  and data[index + 1] == 'o' and data[index + 2] == 'r' and data[index + 3] == ' '):
+                i = index + 4;
+                break;
+        consu = data[0:i]
+        criteria = data[i:len(data)].replace(" ", "_")
+        data = consu +  criteria;
+        print(data)
     trees = list(cp.parse(data.split()))
     answer = trees[0].label()['SEM']
     answer = [s for s in answer if s]
@@ -125,7 +137,7 @@ try:
             for x in route.filter(idroute = keywords_id):
                 textResult = textResult + ' ' + x.name
                 print(x.name)
-    tts = gTTS(text=textResult, lang='es-CO')
+    tts = gTTS(text=textResult, lang="es")
     tts.save("out.mp3")
     os.system("vlc out.mp3 --intf dummy --play-and-exit")
     time.sleep(3)
